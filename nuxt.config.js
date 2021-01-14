@@ -2,23 +2,31 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'hiring-composition-api',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ''
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -30,6 +38,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/composition-api',
+
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -41,14 +50,19 @@ export default {
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     baseURL: process.env.BASE_URL || 'https://reqres.in/api',
-    browserBaseURL:
-      process.env.BROWSER_BASE_URL || 'https://reqres.in/api',
+    browserBaseURL: process.env.BROWSER_BASE_URL || 'https://reqres.in/api',
     credentials: false,
     https: process.env.API_HTTPS === 'true',
     proxyHeaders: false,
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
+  build: {},
+
+  loading: {
+    color: 'DodgerBlue',
+    height: '10px',
+    continuous: true,
+    duration: 3000
   }
 }
